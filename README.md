@@ -1,6 +1,6 @@
 # AI Trip Planner
 
-![Stack](https://img.shields.io/badge/Stack-MERN-green) ![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange) ![Maps](https://img.shields.io/badge/Maps-OpenStreetMap-blue) ![Routing](https://img.shields.io/badge/Routing-OSRM-purple) ![Auth](https://img.shields.io/badge/Auth-JWT-red) ![Deployment](https://img.shields.io/badge/Deployment-Vercel%20%7C%20Render-black) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Stack](https://img.shields.io/badge/Stack-MERN-green) ![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange) ![Maps](https://img.shields.io/badge/Maps-OpenStreetMap-blue) ![Routing](https://img.shields.io/badge/Routing-OSRM-purple) ![Auth](https://img.shields.io/badge/Auth-JWT-red) 
 
 **AI Trip Planner** is a full-stack MERN application that uses AI-assisted reasoning and free, open-source mapping services to generate intelligent travel itineraries in real time.
 
