@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px; /* Base size prevents easy scaling issues */
+    -webkit-text-size-adjust: 100%; /* Prevent scaling on orientation change */
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    @apply break-words; /* Prevent overflow from long words */
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  /* Enforce minimum touch target size of 44px */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 min-h-[44px]; 
+    /* Increased py-2 to py-3 and added min-h-[44px] for touch targets */
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-primary-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+  
+  .btn-warning {
+    @apply btn bg-warning-600 text-white hover:bg-warning-700 focus:ring-warning-500;
+  }
+  
+  .btn-error {
+    @apply btn bg-error-600 text-white hover:bg-error-700 focus:ring-error-500;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs min-h-[32px]; /* Small buttons exception, but discourage on main actions */
+  }
+  
+  .btn-lg {
+    @apply px-6 py-4 text-lg min-h-[56px];
+  }
+  
+  .input {
+    @apply block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 text-base;
+    /* Changed py-2 to py-3 and sm:text-sm to text-base (16px) to prevent iOS zoom */
+  }
+  
+  .input-error {
+    @apply input border-error-300 focus:ring-error-500 focus:border-error-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-soft border border-gray-200;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-medium transition-shadow duration-200;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-800;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary-100 text-secondary-800;
+  }
+  
+  .badge-success {
+    @apply badge bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800;
+  }
+  
+  .badge-error {
+    @apply badge bg-error-100 text-error-800;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 border-t-primary-600;
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-up {
+    @apply animate-slide-up;
+  }
+  
+  .slide-down {
+    @apply animate-slide-down;
+  }
+  
+  .scale-in {
+    @apply animate-scale-in;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700;
+  }
+  
+  .bg-gradient-accent {
+    @apply bg-gradient-to-r from-accent-600 to-accent-700;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-gray-900/80 backdrop-blur-sm border border-gray-700/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Mapbox GL JS custom styles */
+.mapboxgl-map {
+  @apply rounded-lg;
+}
+
+.mapboxgl-popup-content {
+  @apply rounded-lg shadow-medium border-0;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-gray-500 hover:text-gray-700;
+}
+
+/* React Modal custom styles */
+.ReactModal__Overlay {
+  @apply bg-black/50 backdrop-blur-sm;
+}
+
+.ReactModal__Content {
+  @apply bg-white rounded-lg shadow-strong border-0 outline-none;
+}
+
+/* React Select custom styles */
+.react-select__control {
+  @apply border-gray-300 shadow-sm;
+}
+
+.react-select__control--is-focused {
+  @apply border-primary-500 ring-2 ring-primary-500 ring-opacity-50;
+}
+
+.react-select__option--is-focused {
+  @apply bg-primary-50;
+}
+
+.react-select__option--is-selected {
+  @apply bg-primary-600;
+}
+
+/* React DatePicker custom styles */
+.react-datepicker-wrapper {
+  @apply block w-full;
+}
+
+.react-datepicker__input-container input {
+  @apply input;
+}
+
+.react-datepicker {
+  @apply border-gray-300 rounded-lg shadow-medium;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 border-gray-300;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-primary-600 text-white;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply bg-primary-100 text-primary-900;
+}
+
+/* React Image Gallery custom styles */
+.image-gallery {
+  @apply rounded-lg overflow-hidden;
+}
+
+.image-gallery-slide {
+  @apply bg-gray-100;
+}
+
+.image-gallery-thumbnail {
+  @apply border-2 border-transparent hover:border-primary-500;
+}
+
+.image-gallery-thumbnail.active {
+  @apply border-primary-500;
+}
+
+/* React Slick custom styles */
+.slick-slider {
+  @apply relative;
+}
+
+.slick-track {
+  @apply flex;
+}
+
+.slick-slide {
+  @apply px-2;
+}
+
+.slick-dots {
+  @apply flex justify-center mt-4 space-x-2;
+}
+
+.slick-dots li {
+  @apply list-none;
+}
+
+.slick-dots li button {
+  @apply w-2 h-2 rounded-full bg-gray-300 text-transparent;
+}
+
+.slick-dots li.slick-active button {
+  @apply bg-primary-600;
+}
+
+/* Framer Motion custom styles */
+.motion-safe\:animate-fade-in {
+  @apply animate-fade-in;
+}
+
+.motion-safe\:animate-slide-up {
+  @apply animate-slide-up;
+}
+
+.motion-safe\:animate-slide-down {
+  @apply animate-slide-down;
+}
+
+.motion-safe\:animate-scale-in {
+  @apply animate-scale-in;
+}
+
+@media (max-width: 768px) {
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+}

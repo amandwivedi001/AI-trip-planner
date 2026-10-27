@@ -1,0 +1,30 @@
+{
+  "name": "ai-trip-planner",
+  "version": "1.0.0",
+  "description": "Full-stack AI Trip Planner web app using MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && node server.js",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "mern",
+    "trip-planner",
+    "ai",
+    "travel",
+    "booking"
+  ],
+  "author": "AI Trip Planner Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  }
+}

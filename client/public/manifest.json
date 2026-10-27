@@ -1,0 +1,9 @@
+{
+  "short_name": "AI Trip Planner",
+  "name": "AI Trip Planner - Intelligent Travel Planning",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6366f1",
+  "background_color": "#ffffff"
+}
