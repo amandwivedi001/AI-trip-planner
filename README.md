@@ -14,14 +14,6 @@ AI Trip Planner combines **Google Gemini AI**, **OpenStreetMap**, and **OSRM rou
 
 ---
 
-## Links
-
-- **Live Application**: [https://trips-planner-blue.vercel.app/](https://trips-planner-blue.vercel.app/)
-- **Video Demo**: [https://youtu.be/2isgUskJNqY](https://youtu.be/2isgUskJNqY)
-- **Portfolio**: [https://harshlad.vercel.app/](https://harshlad.vercel.app/)
-
----
-
 ## Problem Statement
 
 Most travel planning platforms suffer from:
@@ -502,12 +494,6 @@ NODE_ENV=production npm start
 - Social sharing features
 - Multi-language support
 - Dark mode
-
----
-
-## License
-
-This project is licensed under the **MIT License**.
 
 ---
 
